@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'EelTechTest' target in the 'EelTechTest' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

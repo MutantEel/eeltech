@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14A8CC5417A44618001CC65F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC5317A44618001CC65F /* Cocoa.framework */; };
+		14A8CC5E17A44618001CC65F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A8CC5C17A44618001CC65F /* InfoPlist.strings */; };
+		14A8CC7417A44675001CC65F /* GLFW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC7317A4466F001CC65F /* GLFW.framework */; };
+		14A8CC7517A4467C001CC65F /* GLEW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC6D17A4465F001CC65F /* GLEW.framework */; };
+		14A8CC7E17A446C4001CC65F /* Artemis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC7D17A446BE001CC65F /* Artemis.framework */; };
+		14A8CC8017A44752001CC65F /* GlfwWindowingSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 14A8CC7F17A44752001CC65F /* GlfwWindowingSystem.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		14A8CC8217A44A5E001CC65F /* GlfwWindowingSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CC8117A44A5E001CC65F /* GlfwWindowingSystem.cpp */; };
+		14A8CC8417A45363001CC65F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC8317A45363001CC65F /* OpenGL.framework */; };
+		14A8CCBC17A459ED001CC65F /* Artemis.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CC7D17A446BE001CC65F /* Artemis.framework */; };
+		14A8CCBD17A459F1001CC65F /* GLFW.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CC7317A4466F001CC65F /* GLFW.framework */; };
+		14A8CCBE17A459F5001CC65F /* GLEW.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CC6D17A4465F001CC65F /* GLEW.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14A8CC6C17A4465F001CC65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC6817A4465F001CC65F /* GLEW.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14CCFB2117A2D23C00410980;
+			remoteInfo = GLEW;
+		};
+		14A8CC7217A4466F001CC65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC6E17A4466F001CC65F /* GLFW.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14A8CBCC17A21ED2001CC65F;
+			remoteInfo = GLFW;
+		};
+		14A8CC7C17A446BE001CC65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC7817A446BE001CC65F /* Artemis.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14EF5729179EDA4C004B6740;
+			remoteInfo = Artemis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14A8CCB817A459DD001CC65F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14A8CCBE17A459F5001CC65F /* GLEW.framework in CopyFiles */,
+				14A8CCBD17A459F1001CC65F /* GLFW.framework in CopyFiles */,
+				14A8CCBC17A459ED001CC65F /* Artemis.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14A8CC5017A44618001CC65F /* EelTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EelTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A8CC5317A44618001CC65F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		14A8CC5617A44618001CC65F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		14A8CC5717A44618001CC65F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		14A8CC5817A44618001CC65F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14A8CC5B17A44618001CC65F /* EelTech-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EelTech-Info.plist"; sourceTree = "<group>"; };
+		14A8CC5D17A44618001CC65F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14A8CC5F17A44618001CC65F /* EelTech-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EelTech-Prefix.pch"; sourceTree = "<group>"; };
+		14A8CC6817A4465F001CC65F /* GLEW.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLEW.xcodeproj; path = "../../../glew-eeltech/projects/mac/GLEW.xcodeproj"; sourceTree = "<group>"; };
+		14A8CC6E17A4466F001CC65F /* GLFW.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLFW.xcodeproj; path = "../../../glfw-eeltech/projects/mac/GLFW.xcodeproj"; sourceTree = "<group>"; };
+		14A8CC7817A446BE001CC65F /* Artemis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Artemis.xcodeproj; path = "../../../Artemis-Cpp/projects/mac/Artemis.xcodeproj"; sourceTree = "<group>"; };
+		14A8CC7F17A44752001CC65F /* GlfwWindowingSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GlfwWindowingSystem.hpp; sourceTree = "<group>"; };
+		14A8CC8117A44A5E001CC65F /* GlfwWindowingSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlfwWindowingSystem.cpp; sourceTree = "<group>"; };
+		14A8CC8317A45363001CC65F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14A8CC4C17A44618001CC65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A8CC8417A45363001CC65F /* OpenGL.framework in Frameworks */,
+				14A8CC7E17A446C4001CC65F /* Artemis.framework in Frameworks */,
+				14A8CC5417A44618001CC65F /* Cocoa.framework in Frameworks */,
+				14A8CC7417A44675001CC65F /* GLFW.framework in Frameworks */,
+				14A8CC7517A4467C001CC65F /* GLEW.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14A8CC4617A44618001CC65F = {
+			isa = PBXGroup;
+			children = (
+				14A8CC7817A446BE001CC65F /* Artemis.xcodeproj */,
+				14A8CC6E17A4466F001CC65F /* GLFW.xcodeproj */,
+				14A8CC6817A4465F001CC65F /* GLEW.xcodeproj */,
+				14A8CC5917A44618001CC65F /* EelTech */,
+				14A8CC5217A44618001CC65F /* Frameworks */,
+				14A8CC5117A44618001CC65F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14A8CC5117A44618001CC65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC5017A44618001CC65F /* EelTech.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC5217A44618001CC65F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC5817A44618001CC65F /* Foundation.framework */,
+				14A8CC5717A44618001CC65F /* CoreData.framework */,
+				14A8CC5617A44618001CC65F /* AppKit.framework */,
+				14A8CC8317A45363001CC65F /* OpenGL.framework */,
+				14A8CC5317A44618001CC65F /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14A8CC5917A44618001CC65F /* EelTech */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC7717A44699001CC65F /* src */,
+				14A8CC7617A44691001CC65F /* include */,
+				14A8CC5A17A44618001CC65F /* Supporting Files */,
+			);
+			path = EelTech;
+			sourceTree = "<group>";
+		};
+		14A8CC5A17A44618001CC65F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC5B17A44618001CC65F /* EelTech-Info.plist */,
+				14A8CC5C17A44618001CC65F /* InfoPlist.strings */,
+				14A8CC5F17A44618001CC65F /* EelTech-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14A8CC6917A4465F001CC65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC6D17A4465F001CC65F /* GLEW.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC6F17A4466F001CC65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC7317A4466F001CC65F /* GLFW.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC7617A44691001CC65F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC7F17A44752001CC65F /* GlfwWindowingSystem.hpp */,
+			);
+			name = include;
+			path = ../../../include;
+			sourceTree = "<group>";
+		};
+		14A8CC7717A44699001CC65F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC8117A44A5E001CC65F /* GlfwWindowingSystem.cpp */,
+			);
+			name = src;
+			path = ../../../src;
+			sourceTree = "<group>";
+		};
+		14A8CC7917A446BE001CC65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC7D17A446BE001CC65F /* Artemis.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		14A8CC4D17A44618001CC65F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A8CC8017A44752001CC65F /* GlfwWindowingSystem.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		14A8CC4F17A44618001CC65F /* EelTech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A8CC6517A44618001CC65F /* Build configuration list for PBXNativeTarget "EelTech" */;
+			buildPhases = (
+				14A8CC4B17A44618001CC65F /* Sources */,
+				14A8CC4C17A44618001CC65F /* Frameworks */,
+				14A8CC4D17A44618001CC65F /* Headers */,
+				14A8CC4E17A44618001CC65F /* Resources */,
+				14A8CCB817A459DD001CC65F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EelTech;
+			productName = EelTech;
+			productReference = 14A8CC5017A44618001CC65F /* EelTech.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14A8CC4717A44618001CC65F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Mutant Eel";
+			};
+			buildConfigurationList = 14A8CC4A17A44618001CC65F /* Build configuration list for PBXProject "EelTech" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14A8CC4617A44618001CC65F;
+			productRefGroup = 14A8CC5117A44618001CC65F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 14A8CC7917A446BE001CC65F /* Products */;
+					ProjectRef = 14A8CC7817A446BE001CC65F /* Artemis.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC6917A4465F001CC65F /* Products */;
+					ProjectRef = 14A8CC6817A4465F001CC65F /* GLEW.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC6F17A4466F001CC65F /* Products */;
+					ProjectRef = 14A8CC6E17A4466F001CC65F /* GLFW.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				14A8CC4F17A44618001CC65F /* EelTech */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		14A8CC6D17A4465F001CC65F /* GLEW.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLEW.framework;
+			remoteRef = 14A8CC6C17A4465F001CC65F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC7317A4466F001CC65F /* GLFW.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLFW.framework;
+			remoteRef = 14A8CC7217A4466F001CC65F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC7D17A446BE001CC65F /* Artemis.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Artemis.framework;
+			remoteRef = 14A8CC7C17A446BE001CC65F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14A8CC4E17A44618001CC65F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A8CC5E17A44618001CC65F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14A8CC4B17A44618001CC65F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A8CC8217A44A5E001CC65F /* GlfwWindowingSystem.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14A8CC5C17A44618001CC65F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14A8CC5D17A44618001CC65F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14A8CC6317A44618001CC65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		14A8CC6417A44618001CC65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		14A8CC6617A44618001CC65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EelTech/EelTech-Prefix.pch";
+				INFOPLIST_FILE = "EelTech/EelTech-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		14A8CC6717A44618001CC65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EelTech/EelTech-Prefix.pch";
+				INFOPLIST_FILE = "EelTech/EelTech-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14A8CC4A17A44618001CC65F /* Build configuration list for PBXProject "EelTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A8CC6317A44618001CC65F /* Debug */,
+				14A8CC6417A44618001CC65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A8CC6517A44618001CC65F /* Build configuration list for PBXNativeTarget "EelTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A8CC6617A44618001CC65F /* Debug */,
+				14A8CC6717A44618001CC65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14A8CC4717A44618001CC65F /* Project object */;
+}
