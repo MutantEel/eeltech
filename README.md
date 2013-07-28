@@ -4,14 +4,38 @@ Eel Tech
 Eel tech is a component based framework for creating games. Eel Tech is targeting OS X, Linux and Windows operating systems however right now only OS X has projnect files and support. Once the base of the Framework is complete Linux (Makefile) and Windows (VS) projects will be created.
 
 
-Current Features
-===
+### Current Features
 - Component Based Architecure (Artemis) with added support for serialization to Json.
 - Windowing System (glfw)
+- Input System (glfw) mouse and keyboard (gamepad is possible but no support yet)
 
 
-License
-===
+### Compiling
+Eel Tech consists of multiple library and repositories. I've seperated out each library into it's own repository so you will need to clone the following repositories into the same folder
+- Artemis-cpp ( https://github.com/MutantEel/Artemis-Cpp )
+- glfw-eeltech ( https://github.com/MutantEel/glfw-eeltech )
+- glew-eeltech ( https://github.com/MutantEel/glew-eeltech )
+- eeltech ( https://github.com/MutantEel/eeltech )
+
+The console commands would be:
+
+```Shell
+mkdir eeltech
+cd eeltech
+git clone git@github.com:MutantEel/Artemis-Cpp.git
+git clone git@github.com:MutantEel/glfw-eeltech.git
+git clone git@github.com:MutantEel/glew-eeltech.git
+git clone git@github.com:MutantEel/eeltech.git
+```
+
+The main eeltech project is located in:
+eeltech/projects/mac/EelTech.xcodeproj
+
+and the test/demo project is in:
+eeltech/projects/mac/EelTechTest.xcodeproj
+
+
+### License
 
 Copyright (c) 2013, Mutant Eel
 All rights reserved.
