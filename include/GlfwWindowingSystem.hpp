@@ -11,6 +11,7 @@
 
 #include <Artemis/EntityProcessingSystem.hpp>
 #include <Artemis/ComponentMapper.hpp>
+#include <Artemis/Entity.hpp>
 #include <GLEW/GLEW.h>
 #include <GLFW/glfw3.h>
 #include <list>
@@ -35,6 +36,36 @@ namespace eeltech
 			GLFWwindow* handle;
 			bool closeRequested;
 			bool shouldClose;
+		
+			template <typename c>
+			static c* getInputFromHandle(GLFWwindow* handle)
+			{
+				if(!handle)
+				{
+					return NULL;
+				}
+				
+				void* userPtr = glfwGetWindowUserPointer(handle);
+				if(!userPtr)
+				{
+					return NULL;
+				}
+				
+				artemis::Entity* ent = static_cast<artemis::Entity*>(userPtr);
+				
+				
+				if(ent)
+				{
+					c* comp = dynamic_cast<c*>(ent->getComponent<c>());
+					
+					if(comp)
+					{
+						return comp;
+					}
+				}
+				
+				return NULL;
+			}
 	};
 	
 	

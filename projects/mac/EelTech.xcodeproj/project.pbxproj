@@ -18,6 +18,8 @@
 		14A8CCBC17A459ED001CC65F /* Artemis.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CC7D17A446BE001CC65F /* Artemis.framework */; };
 		14A8CCBD17A459F1001CC65F /* GLFW.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CC7317A4466F001CC65F /* GLFW.framework */; };
 		14A8CCBE17A459F5001CC65F /* GLEW.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CC6D17A4465F001CC65F /* GLEW.framework */; };
+		14A8CCC417A5862F001CC65F /* GlfwInputSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 14A8CCC317A5862F001CC65F /* GlfwInputSystem.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		14A8CCC617A587CA001CC65F /* GlfwInputSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CCC517A587CA001CC65F /* GlfwInputSystem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		14A8CC7F17A44752001CC65F /* GlfwWindowingSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GlfwWindowingSystem.hpp; sourceTree = "<group>"; };
 		14A8CC8117A44A5E001CC65F /* GlfwWindowingSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlfwWindowingSystem.cpp; sourceTree = "<group>"; };
 		14A8CC8317A45363001CC65F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		14A8CCC317A5862F001CC65F /* GlfwInputSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GlfwInputSystem.hpp; sourceTree = "<group>"; };
+		14A8CCC517A587CA001CC65F /* GlfwInputSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlfwInputSystem.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				14A8CC7F17A44752001CC65F /* GlfwWindowingSystem.hpp */,
+				14A8CCC317A5862F001CC65F /* GlfwInputSystem.hpp */,
 			);
 			name = include;
 			path = ../../../include;
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				14A8CC8117A44A5E001CC65F /* GlfwWindowingSystem.cpp */,
+				14A8CCC517A587CA001CC65F /* GlfwInputSystem.cpp */,
 			);
 			name = src;
 			path = ../../../src;
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A8CC8017A44752001CC65F /* GlfwWindowingSystem.hpp in Headers */,
+				14A8CCC417A5862F001CC65F /* GlfwInputSystem.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A8CC8217A44A5E001CC65F /* GlfwWindowingSystem.cpp in Sources */,
+				14A8CCC617A587CA001CC65F /* GlfwInputSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

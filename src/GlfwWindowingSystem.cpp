@@ -7,6 +7,7 @@
 //
 
 #include <EelTech/GlfwWindowingSystem.hpp>
+#include <Artemis/Entity.hpp>
 
 namespace eeltech
 {
@@ -152,7 +153,7 @@ namespace eeltech
 			return false;
 		}
 		
-		glfwSetWindowUserPointer(comp->handle, comp);
+		glfwSetWindowUserPointer(comp->handle, &e);
 		glfwSetWindowCloseCallback(comp->handle, &GlfwWindowingSystem::closeRequested);
 		
 		glfwSwapInterval(1);
@@ -232,23 +233,12 @@ namespace eeltech
 	
 	void GlfwWindowingSystem::closeRequested(GLFWwindow* handle)
 	{
-		if(!handle)
+		WindowingComponent* comp = WindowingComponent::getInputFromHandle<WindowingComponent>(handle);
+		if(!comp)
 		{
 			return;
 		}
 		
-		void* userPtr = glfwGetWindowUserPointer(handle);
-		if(!userPtr)
-		{
-			return;
-		}
-		
-		WindowingComponent* comp = static_cast<WindowingComponent*>(userPtr);
-		
-		
-		if(comp)
-		{
-			comp->closeRequested = true;
-		}
+		comp->closeRequested = true;
 	}
 }
