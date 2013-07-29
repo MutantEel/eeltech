@@ -8,13 +8,14 @@ Eel tech is a component based framework for creating games. Eel Tech is targetin
 - Component Based Architecure (Artemis) with added support for serialization to Json.
 - Windowing System (glfw)
 - Input System (glfw) mouse and keyboard (gamepad is possible but no support yet)
-
+- Comprehensive math library (glm)
 
 ### Compiling
 Eel Tech consists of multiple library and repositories. I've seperated out each library into it's own repository so you will need to clone the following repositories into the same folder
 - Artemis-cpp ( https://github.com/MutantEel/Artemis-Cpp )
 - glfw-eeltech ( https://github.com/MutantEel/glfw-eeltech )
 - glew-eeltech ( https://github.com/MutantEel/glew-eeltech )
+- glm-eeltech ( https://github.com/MutantEel/glm-eeltech )
 - eeltech ( https://github.com/MutantEel/eeltech )
 
 The console commands would be:
@@ -25,6 +26,7 @@ cd eeltech
 git clone git@github.com:MutantEel/Artemis-Cpp.git
 git clone git@github.com:MutantEel/glfw-eeltech.git
 git clone git@github.com:MutantEel/glew-eeltech.git
+git clone git@github.com:MutantEel/glm-eeltech.git
 git clone git@github.com:MutantEel/eeltech.git
 ```
 
