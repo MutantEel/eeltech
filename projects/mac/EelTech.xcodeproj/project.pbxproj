@@ -31,6 +31,7 @@
 		14A8CD2B17A76DBE001CC65F /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD2017A76DBE001CC65F /* Texture.cpp */; };
 		14A8CD2C17A76DBE001CC65F /* Uniform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD2117A76DBE001CC65F /* Uniform.cpp */; };
 		14A8CD2D17A76DBE001CC65F /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD2217A76DBE001CC65F /* VertexArray.cpp */; };
+		14A8CD6E17A77952001CC65F /* SOIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CD6D17A77943001CC65F /* SOIL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 140B448417A6C13D004AE462;
 			remoteInfo = glm;
+		};
+		14A8CD6C17A77943001CC65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD6817A77943001CC65F /* SOIL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 14A8CD3817A77857001CC65F;
+			remoteInfo = SOIL;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -93,6 +101,7 @@
 		14A8CD2017A76DBE001CC65F /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		14A8CD2117A76DBE001CC65F /* Uniform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Uniform.cpp; sourceTree = "<group>"; };
 		14A8CD2217A76DBE001CC65F /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
+		14A8CD6817A77943001CC65F /* SOIL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SOIL.xcodeproj; path = "../../../soil-eeltech/projects/mac/SOIL.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A8CD6E17A77952001CC65F /* SOIL.framework in Frameworks */,
 				14A8CCF117A7480F001CC65F /* glm.framework in Frameworks */,
 				14A8CC8417A45363001CC65F /* OpenGL.framework in Frameworks */,
 				14A8CC7E17A446C4001CC65F /* Artemis.framework in Frameworks */,
@@ -115,6 +125,7 @@
 		14A8CC4617A44618001CC65F = {
 			isa = PBXGroup;
 			children = (
+				14A8CD6817A77943001CC65F /* SOIL.xcodeproj */,
 				14A8CCEB17A7480A001CC65F /* glm.xcodeproj */,
 				14A8CC7817A446BE001CC65F /* Artemis.xcodeproj */,
 				14A8CC6E17A4466F001CC65F /* GLFW.xcodeproj */,
@@ -252,6 +263,14 @@
 			path = graphics;
 			sourceTree = "<group>";
 		};
+		14A8CD6917A77943001CC65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD6D17A77943001CC65F /* SOIL.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -321,6 +340,10 @@
 					ProductGroup = 14A8CCEC17A7480A001CC65F /* Products */;
 					ProjectRef = 14A8CCEB17A7480A001CC65F /* glm.xcodeproj */;
 				},
+				{
+					ProductGroup = 14A8CD6917A77943001CC65F /* Products */;
+					ProjectRef = 14A8CD6817A77943001CC65F /* SOIL.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -356,6 +379,13 @@
 			fileType = wrapper.framework;
 			path = glm.framework;
 			remoteRef = 14A8CCEF17A7480A001CC65F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD6D17A77943001CC65F /* SOIL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SOIL.framework;
+			remoteRef = 14A8CD6C17A77943001CC65F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

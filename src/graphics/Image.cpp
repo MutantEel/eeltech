@@ -9,7 +9,7 @@
 
 #include <eeltech/graphics/Image.hpp>
 
-//#include <SOIL/SOIL.h>
+#include <SOIL/SOIL.h>
 
 #include <iostream>
 #include <fstream>
@@ -30,14 +30,14 @@ Image::~Image()
 {
   if(data)
   {
-    //SOIL_free_image_data(data);
+    SOIL_free_image_data(data);
   }
 }
 
 
 bool Image::load(const char* const data, int size, bool alpha)
 {
-  //this->data = SOIL_load_image_from_memory((const unsigned char*)data, size, &width, &height, &channels, alpha ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
+  this->data = SOIL_load_image_from_memory((const unsigned char*)data, size, &width, &height, &channels, alpha ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
   return this->data != 0;
 }
 
