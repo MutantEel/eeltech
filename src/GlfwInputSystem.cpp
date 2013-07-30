@@ -108,8 +108,8 @@ namespace eeltech
 			return;
 		}
 		
-		comp->mousePosition[0] = (int)x;
-		comp->mousePosition[1] = (int)y;
+		comp->mousePosition.x = x;
+		comp->mousePosition.y = y;
 	}
 	
 	
@@ -121,8 +121,8 @@ namespace eeltech
 			return;
 		}
 		
-		comp->mousePosition[0] = (int)x;
-		comp->mousePosition[1] = (int)y;
+		comp->mouseWheelPosition.x = x;
+		comp->mouseWheelPosition.y = y;
 	}
 	
 	

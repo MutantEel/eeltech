@@ -12,6 +12,7 @@
 #include <Artemis/EntityProcessingSystem.hpp>
 #include <Artemis/ComponentMapper.hpp>
 #include <EelTech/GlfwWindowingSystem.hpp>
+#include <glm/glm.hpp>
 #include <GLEW/GLEW.h>
 #include <GLFW/glfw3.h>
 #include <list>
@@ -36,8 +37,8 @@ namespace eeltech
 	{
 		public:
 		
-			int mousePosition[2];
-			int mouseWheelPosition[2];
+			glm::vec2 mousePosition;
+			glm::vec2 mouseWheelPosition;
 		
 			artemis::Bag<int> heldMouseButtons;
 			artemis::Bag<int> pressedMouseButtons;
