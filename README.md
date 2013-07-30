@@ -7,7 +7,7 @@ Eel tech is a component based framework for creating games. Eel Tech is targetin
 ### Current Features
 - Component Based Architecure (Artemis) with added support for serialization to Json.
 - Windowing System (glfw)
-- Input System (glfw) mouse and keyboard (gamepad is possible but no support yet)
+- Input System (glfw) mouse, keyboard and joystick/gamepad
 - Comprehensive math library (glm)
 - Basic graphics data types, Shaders, vbo, vao, textures (SOIL) etc
 
