@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Mutant Eel. All rights reserved.
 //
 
-#include <EelTech/GlfwInputSystem.hpp>
+#include <EelTech/systems/GlfwInputSystem.hpp>
 #include <Artemis/ImmutableBag.hpp>
 
 namespace eeltech

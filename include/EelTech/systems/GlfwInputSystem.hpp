@@ -11,7 +11,7 @@
 
 #include <Artemis/EntityProcessingSystem.hpp>
 #include <Artemis/ComponentMapper.hpp>
-#include <EelTech/GlfwWindowingSystem.hpp>
+#include <EelTech/systems/GlfwWindowingSystem.hpp>
 #include <glm/glm.hpp>
 #include <GLEW/GLEW.h>
 #include <GLFW/glfw3.h>

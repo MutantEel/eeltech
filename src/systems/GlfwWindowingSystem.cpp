@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Mutant Eel. All rights reserved.
 //
 
-#include <EelTech/GlfwWindowingSystem.hpp>
+#include <EelTech/systems/GlfwWindowingSystem.hpp>
 #include <Artemis/Entity.hpp>
 
 namespace eeltech

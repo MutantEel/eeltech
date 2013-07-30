@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Mutant Eel. All rights reserved.
 //
 
-#include <EelTech/GlfwWindowingSystem.hpp>
-#include <EelTech/GlfwInputSystem.hpp>
+#include <EelTech/systems/GlfwWindowingSystem.hpp>
+#include <EelTech/systems/GlfwInputSystem.hpp>
 #include <Artemis/SystemManager.hpp>
 #include <Artemis/Entity.hpp>
 
