@@ -61,6 +61,58 @@ namespace eeltech
 	}
 		
 	
+	void GlfwInputSystem::begin()
+	{
+		std::list<int> joysticksPresent;
+		
+		for(int i = 0; i < 15; i++)
+		{
+			if(glfwJoystickPresent(i) == GL_TRUE)
+			{
+				joysticksPresent.push_back(i);
+			}
+		}
+		
+		for(int i = 0; i < joysticks.size(); i++)
+		{
+			//check for disconnected joysticks
+			if(glfwJoystickPresent(joysticks[i].id) == GL_FALSE)
+			{
+				joysticks.erase(joysticks.begin() + i);
+				i--;
+				continue;
+			}
+			
+			//update joystick data
+			joysticks[i].axis = glfwGetJoystickAxes(joysticks[i].id, &joysticks[i].numAxis);
+			joysticks[i].buttons = glfwGetJoystickButtons(joysticks[i].id, &joysticks[i].numButtons);
+			
+			//remove id from joysticksPresent list so we know it exists
+			for(std::list<int>::iterator itr = joysticksPresent.begin(); itr != joysticksPresent.end(); itr++)
+			{
+				if((*itr) == joysticks[i].id)
+				{
+					joysticksPresent.erase(itr);
+					break;
+				}
+			}
+		}
+		
+		//add new joysticks that were connected
+		for(std::list<int>::iterator itr = joysticksPresent.begin(); itr != joysticksPresent.end(); itr++)
+		{
+			Joystick joy;
+			
+			joy.name = glfwGetJoystickName((*itr));
+			joy.id = (*itr);
+			joy.axis = glfwGetJoystickAxes((*itr), &joy.numAxis);
+			joy.buttons = glfwGetJoystickButtons((*itr), &joy.numButtons);
+
+			joysticks.push_back(joy);
+		}
+	}
+	
+	
 	void GlfwInputSystem::added(artemis::Entity& e)
 	{
 		GLFWwindow* handle = windowingMapper.get(e)->handle;
@@ -71,6 +123,8 @@ namespace eeltech
 			glfwSetCursorPosCallback(handle, &GlfwInputSystem::MousePositionEventCallback);
 			glfwSetScrollCallback(handle, &GlfwInputSystem::MouseWheelPositionEventCallback);
 			glfwSetKeyCallback(handle, &GlfwInputSystem::KeyEventCallback);
+			
+			inputMapper.get(e)->joysticks = &joysticks;
 		}
 		else
 		{
@@ -145,5 +199,8 @@ namespace eeltech
 			comp->releasedKeys.add(key);
 		}
 	}
+	
+	
+	std::vector<Joystick> GlfwInputSystem::joysticks;
 }
 

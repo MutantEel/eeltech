@@ -32,6 +32,20 @@ namespace eeltech
 		};
 	}
 	
+	struct Joystick
+	{
+		int id;
+		const char* name;
+		
+		int numAxis;
+		const float* axis;
+		
+		int numButtons;
+		const unsigned char* buttons;
+	};
+	
+	
+	
 	
 	class InputComponent : public artemis::Component
 	{
@@ -47,8 +61,8 @@ namespace eeltech
 			artemis::Bag<int> heldKeys;
 			artemis::Bag<int> pressedKeys;
 			artemis::Bag<int> releasedKeys;
-		
-			//MARK: FEATURE add support for gamepads
+
+			std::vector<Joystick>* joysticks;
 	};
 	
 	
@@ -65,12 +79,15 @@ namespace eeltech
 			artemis::ComponentMapper<WindowingComponent> windowingMapper;
 			
 			virtual void processEntity(artemis::Entity& e);
+			virtual void begin();
 			virtual void added(artemis::Entity& e);
 		
 			static void MouseButtonEventCallback(GLFWwindow* windowHandle, int button, int action, int modifierKeys);
 			static void MousePositionEventCallback(GLFWwindow* windowHandle, double x, double y);
 			static void MouseWheelPositionEventCallback(GLFWwindow* windowHandle, double xPos, double yPos);
 			static void KeyEventCallback(GLFWwindow* windowHandle, int key, int scancode, int action, int mod);
+		
+			static std::vector<Joystick> joysticks;
 	};
 	
 	
