@@ -8,6 +8,7 @@
 
 #include <EelTech/systems/GlfwWindowingSystem.hpp>
 #include <EelTech/systems/GlfwInputSystem.hpp>
+#include <EelTech/systems/OALSoundSystem.hpp>
 #include <Artemis/ComponentRegistry.hpp>
 #include <Artemis/SystemManager.hpp>
 #include <Artemis/Entity.hpp>
@@ -30,6 +31,7 @@ int main(int argc, char *argv[])
 	
 	eeltech::GlfwWindowingSystem* winSys = (eeltech::GlfwWindowingSystem*)sm->setSystem(new eeltech::GlfwWindowingSystem());
 	eeltech::GlfwInputSystem* inputSys = (eeltech::GlfwInputSystem*)sm->setSystem(new eeltech::GlfwInputSystem());
+	eeltech::OALSoundSystem* soundSys = (eeltech::OALSoundSystem*)sm->setSystem(new eeltech::OALSoundSystem());
 	artemis::EntityManager* em = world.getEntityManager();
 	
 	sm->initializeAll();

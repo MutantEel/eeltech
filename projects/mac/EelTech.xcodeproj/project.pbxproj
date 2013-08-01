@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140B4B0917AAC036004AE462 /* OALSoundSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140B4B0817AAC036004AE462 /* OALSoundSystem.cpp */; };
+		140B4B1117AAC258004AE462 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140B4B1017AAC258004AE462 /* OpenAL.framework */; };
 		14A8CC5417A44618001CC65F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC5317A44618001CC65F /* Cocoa.framework */; };
 		14A8CC5E17A44618001CC65F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A8CC5C17A44618001CC65F /* InfoPlist.strings */; };
 		14A8CC7417A44675001CC65F /* GLFW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC7317A4466F001CC65F /* GLFW.framework */; };
@@ -82,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140B4B0817AAC036004AE462 /* OALSoundSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OALSoundSystem.cpp; sourceTree = "<group>"; };
+		140B4B1017AAC258004AE462 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		14A8CC5017A44618001CC65F /* EelTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EelTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A8CC5317A44618001CC65F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		14A8CC5617A44618001CC65F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140B4B1117AAC258004AE462 /* OpenAL.framework in Frameworks */,
 				14A8CD7517A9F712001CC65F /* physfs.framework in Frameworks */,
 				14A8CD6E17A77952001CC65F /* SOIL.framework in Frameworks */,
 				14A8CCF117A7480F001CC65F /* glm.framework in Frameworks */,
@@ -162,6 +167,7 @@
 		14A8CC5217A44618001CC65F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				140B4B1017AAC258004AE462 /* OpenAL.framework */,
 				14A8CC5817A44618001CC65F /* Foundation.framework */,
 				14A8CC5717A44618001CC65F /* CoreData.framework */,
 				14A8CC5617A44618001CC65F /* AppKit.framework */,
@@ -258,6 +264,7 @@
 			children = (
 				14A8CD1317A76A2B001CC65F /* GlfwInputSystem.cpp */,
 				14A8CD1417A76A2B001CC65F /* GlfwWindowingSystem.cpp */,
+				140B4B0817AAC036004AE462 /* OALSoundSystem.cpp */,
 			);
 			path = systems;
 			sourceTree = "<group>";
@@ -467,6 +474,7 @@
 				14A8CD2D17A76DBE001CC65F /* VertexArray.cpp in Sources */,
 				14A8CD7917A9F776001CC65F /* File.cpp in Sources */,
 				14A8CD7A17A9F776001CC65F /* FileSystem.cpp in Sources */,
+				140B4B0917AAC036004AE462 /* OALSoundSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

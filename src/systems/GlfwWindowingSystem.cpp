@@ -89,7 +89,9 @@ namespace eeltech
 	
 	void GlfwWindowingSystem::processEntity(artemis::Entity& e)
 	{
-		if(windowingMapper.get(e)->shouldClose)
+		WindowingComponent* comp = windowingMapper.get(e);
+		
+		if(comp && comp->shouldClose)
 		{
 			world->getEntityManager()->removeComponent(e, artemis::ComponentTypeManager::getTypeFor<WindowingComponent>());
 		}
@@ -106,7 +108,7 @@ namespace eeltech
 	{
 		WindowingComponent* comp = windowingMapper.get(e);
 		
-		if(comp->isOpen && comp->handle)
+		if(comp && comp->isOpen && comp->handle)
 		{
 			glfwDestroyWindow(comp->handle);
 		}
@@ -134,6 +136,11 @@ namespace eeltech
 		GLFWmonitor* monitor = NULL;
 	
 		WindowingComponent* comp = windowingMapper.get(e);
+		
+		if(!comp)
+		{
+			return false;
+		}
 		
 		if(comp->fullscreen)
 		{
@@ -194,13 +201,23 @@ namespace eeltech
 	
 	void GlfwWindowingSystem::swapBuffers(artemis::Entity& e)
 	{
-		glfwSwapBuffers(windowingMapper.get(e)->handle);
+		WindowingComponent* comp = windowingMapper.get(e);
+		
+		if(comp)
+		{
+			glfwSwapBuffers(comp->handle);
+		}
 	}
 	
 	
 	void GlfwWindowingSystem::makeActiveContext(artemis::Entity& e)
 	{
-		glfwMakeContextCurrent(windowingMapper.get(e)->handle);
+		WindowingComponent* comp = windowingMapper.get(e);
+		
+		if(comp)
+		{
+			glfwMakeContextCurrent(comp->handle);
+		}
 	}
 	
 	
@@ -227,7 +244,7 @@ namespace eeltech
 	{
 		WindowingComponent* comp = windowingMapper.get(e);
 		
-		if(!comp->handle)
+		if(!comp && !comp->handle)
 		{
 			return;
 		}
@@ -239,6 +256,7 @@ namespace eeltech
 	void GlfwWindowingSystem::closeRequested(GLFWwindow* handle)
 	{
 		WindowingComponent* comp = WindowingComponent::getInputFromHandle<WindowingComponent>(handle);
+		
 		if(!comp)
 		{
 			return;
