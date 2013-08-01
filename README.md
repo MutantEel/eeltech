@@ -10,6 +10,7 @@ Eel tech is a component based framework for creating games. Eel Tech is targetin
 - Input System (glfw) mouse, keyboard and joystick/gamepad
 - Comprehensive math library (glm)
 - Basic graphics data types, Shaders, vbo, vao, textures (SOIL) etc
+- Basic file system that handles loading file from multiple root paths and archive files (physfs)
 
 
 ### Compiling
@@ -18,7 +19,8 @@ Eel Tech consists of multiple library and repositories. I've seperated out each 
 - glfw-eeltech ( https://github.com/MutantEel/glfw-eeltech )
 - glew-eeltech ( https://github.com/MutantEel/glew-eeltech )
 - glm-eeltech ( https://github.com/MutantEel/glm-eeltech )
-- soil-eeltech ( https://github.com/MutantEel/glm-eeltech )
+- soil-eeltech ( https://github.com/MutantEel/soil-eeltech )
+- physfs-eeltech ( https://github.com/MutantEel/physfs-eeltech )
 - eeltech ( https://github.com/MutantEel/eeltech )
 
 The console commands would be:
@@ -31,6 +33,7 @@ git clone git@github.com:MutantEel/glfw-eeltech.git
 git clone git@github.com:MutantEel/glew-eeltech.git
 git clone git@github.com:MutantEel/glm-eeltech.git
 git clone git@github.com:MutantEel/soil-eeltech.git
+git clone git@github.com:MutantEel/physfs-eeltech.git
 git clone git@github.com:MutantEel/eeltech.git
 ```
 
