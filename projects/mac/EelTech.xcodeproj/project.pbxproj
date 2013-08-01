@@ -14,8 +14,6 @@
 		14A8CC7E17A446C4001CC65F /* Artemis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC7D17A446BE001CC65F /* Artemis.framework */; };
 		14A8CC8417A45363001CC65F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CC8317A45363001CC65F /* OpenGL.framework */; };
 		14A8CCF117A7480F001CC65F /* glm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CCF017A7480A001CC65F /* glm.framework */; };
-		14A8CD0D17A768E3001CC65F /* graphics in Resources */ = {isa = PBXBuildFile; fileRef = 14A8CD0C17A768E3001CC65F /* graphics */; };
-		14A8CD0F17A768E9001CC65F /* systems in Resources */ = {isa = PBXBuildFile; fileRef = 14A8CD0E17A768E9001CC65F /* systems */; };
 		14A8CD1017A76980001CC65F /* systems in Headers */ = {isa = PBXBuildFile; fileRef = 14A8CD0E17A768E9001CC65F /* systems */; settings = {ATTRIBUTES = (Public, ); }; };
 		14A8CD1117A76982001CC65F /* graphics in Headers */ = {isa = PBXBuildFile; fileRef = 14A8CD0C17A768E3001CC65F /* graphics */; settings = {ATTRIBUTES = (Public, ); }; };
 		14A8CD1517A76A2B001CC65F /* GlfwInputSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD1317A76A2B001CC65F /* GlfwInputSystem.cpp */; };
@@ -32,6 +30,10 @@
 		14A8CD2C17A76DBE001CC65F /* Uniform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD2117A76DBE001CC65F /* Uniform.cpp */; };
 		14A8CD2D17A76DBE001CC65F /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD2217A76DBE001CC65F /* VertexArray.cpp */; };
 		14A8CD6E17A77952001CC65F /* SOIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CD6D17A77943001CC65F /* SOIL.framework */; };
+		14A8CD7517A9F712001CC65F /* physfs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CD7417A9F70E001CC65F /* physfs.framework */; };
+		14A8CD7917A9F776001CC65F /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD7717A9F776001CC65F /* File.cpp */; };
+		14A8CD7A17A9F776001CC65F /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A8CD7817A9F776001CC65F /* FileSystem.cpp */; };
+		14A8CD8217A9F7E0001CC65F /* core in Headers */ = {isa = PBXBuildFile; fileRef = 14A8CD8017A9F7D3001CC65F /* core */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,13 @@
 			remoteGlobalIDString = 14A8CD3817A77857001CC65F;
 			remoteInfo = SOIL;
 		};
+		14A8CD7317A9F70E001CC65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD6F17A9F70D001CC65F /* physfs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 140B469817A964AC004AE462;
+			remoteInfo = physfs;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +111,10 @@
 		14A8CD2117A76DBE001CC65F /* Uniform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Uniform.cpp; sourceTree = "<group>"; };
 		14A8CD2217A76DBE001CC65F /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		14A8CD6817A77943001CC65F /* SOIL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SOIL.xcodeproj; path = "../../../soil-eeltech/projects/mac/SOIL.xcodeproj"; sourceTree = "<group>"; };
+		14A8CD6F17A9F70D001CC65F /* physfs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = physfs.xcodeproj; path = "../../../physfs-eeltech/projects/mac/physfs.xcodeproj"; sourceTree = "<group>"; };
+		14A8CD7717A9F776001CC65F /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		14A8CD7817A9F776001CC65F /* FileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileSystem.cpp; sourceTree = "<group>"; };
+		14A8CD8017A9F7D3001CC65F /* core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = core; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A8CD7517A9F712001CC65F /* physfs.framework in Frameworks */,
 				14A8CD6E17A77952001CC65F /* SOIL.framework in Frameworks */,
 				14A8CCF117A7480F001CC65F /* glm.framework in Frameworks */,
 				14A8CC8417A45363001CC65F /* OpenGL.framework in Frameworks */,
@@ -125,6 +139,7 @@
 		14A8CC4617A44618001CC65F = {
 			isa = PBXGroup;
 			children = (
+				14A8CD6F17A9F70D001CC65F /* physfs.xcodeproj */,
 				14A8CD6817A77943001CC65F /* SOIL.xcodeproj */,
 				14A8CCEB17A7480A001CC65F /* glm.xcodeproj */,
 				14A8CC7817A446BE001CC65F /* Artemis.xcodeproj */,
@@ -204,6 +219,7 @@
 		14A8CC7717A44699001CC65F /* src */ = {
 			isa = PBXGroup;
 			children = (
+				14A8CD7617A9F760001CC65F /* core */,
 				14A8CD1717A76D6C001CC65F /* graphics */,
 				14A8CD1217A76A13001CC65F /* systems */,
 			);
@@ -230,6 +246,7 @@
 		14A8CD0B17A768C2001CC65F /* EelTech */ = {
 			isa = PBXGroup;
 			children = (
+				14A8CD8017A9F7D3001CC65F /* core */,
 				14A8CD0E17A768E9001CC65F /* systems */,
 				14A8CD0C17A768E3001CC65F /* graphics */,
 			);
@@ -271,6 +288,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		14A8CD7017A9F70D001CC65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD7417A9F70E001CC65F /* physfs.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD7617A9F760001CC65F /* core */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD7717A9F776001CC65F /* File.cpp */,
+				14A8CD7817A9F776001CC65F /* FileSystem.cpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -280,6 +314,7 @@
 			files = (
 				14A8CD1017A76980001CC65F /* systems in Headers */,
 				14A8CD1117A76982001CC65F /* graphics in Headers */,
+				14A8CD8217A9F7E0001CC65F /* core in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +376,10 @@
 					ProjectRef = 14A8CCEB17A7480A001CC65F /* glm.xcodeproj */;
 				},
 				{
+					ProductGroup = 14A8CD7017A9F70D001CC65F /* Products */;
+					ProjectRef = 14A8CD6F17A9F70D001CC65F /* physfs.xcodeproj */;
+				},
+				{
 					ProductGroup = 14A8CD6917A77943001CC65F /* Products */;
 					ProjectRef = 14A8CD6817A77943001CC65F /* SOIL.xcodeproj */;
 				},
@@ -388,6 +427,13 @@
 			remoteRef = 14A8CD6C17A77943001CC65F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		14A8CD7417A9F70E001CC65F /* physfs.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = physfs.framework;
+			remoteRef = 14A8CD7317A9F70E001CC65F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -396,8 +442,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A8CC5E17A44618001CC65F /* InfoPlist.strings in Resources */,
-				14A8CD0D17A768E3001CC65F /* graphics in Resources */,
-				14A8CD0F17A768E9001CC65F /* systems in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +465,8 @@
 				14A8CD2B17A76DBE001CC65F /* Texture.cpp in Sources */,
 				14A8CD2C17A76DBE001CC65F /* Uniform.cpp in Sources */,
 				14A8CD2D17A76DBE001CC65F /* VertexArray.cpp in Sources */,
+				14A8CD7917A9F776001CC65F /* File.cpp in Sources */,
+				14A8CD7A17A9F776001CC65F /* FileSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
