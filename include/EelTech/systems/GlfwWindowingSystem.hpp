@@ -24,6 +24,7 @@ namespace eeltech
 	{
 		public:
 		
+			WindowingComponent();
 			WindowingComponent(std::string title, float width, float height, int fsaa = 0, bool fullscreen = false, bool cursorVisible = true);
 		
 			bool isOpen;
@@ -36,6 +37,26 @@ namespace eeltech
 			GLFWwindow* handle;
 			bool closeRequested;
 			bool shouldClose;
+		
+			ARTEMIS_SERIALIZATION_SETUP(WindowingComponent)
+		
+			ARTEMIS_SERIALIZE_START
+			ARTEMIS_SERIALIZE(title)
+			ARTEMIS_SERIALIZE(width)
+			ARTEMIS_SERIALIZE(height)
+			ARTEMIS_SERIALIZE(fsaa)
+			ARTEMIS_SERIALIZE(fullscreen)
+			ARTEMIS_SERIALIZE(cursorVisible)
+			ARTEMIS_SERIALIZE_END
+		
+			ARTEMIS_DESERIALIZE_START
+			ARTEMIS_DESERIALIZE(title, String, "untitled")
+			ARTEMIS_DESERIALIZE(width, Int, 800)
+			ARTEMIS_DESERIALIZE(height, Int, 600)
+			ARTEMIS_DESERIALIZE(fsaa, Int, 0)
+			ARTEMIS_DESERIALIZE(fullscreen, Bool, false)
+			ARTEMIS_DESERIALIZE(cursorVisible, Bool, false)
+			ARTEMIS_DESERIALIZE_END
 		
 			template <typename c>
 			static c* getInputFromHandle(GLFWwindow* handle)

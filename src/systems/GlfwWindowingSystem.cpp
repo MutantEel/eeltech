@@ -11,7 +11,12 @@
 
 namespace eeltech
 {
-	WindowingComponent:: WindowingComponent(std::string title, float width, float height, int fsaa, bool fullscreen, bool cursorVisible) : title(title), width(width), height(height), fsaa(fsaa), fullscreen(fullscreen), cursorVisible(cursorVisible), handle(NULL), isOpen(false), closeRequested(false), shouldClose(false)
+	WindowingComponent::WindowingComponent()
+	{
+		
+	}
+	
+	WindowingComponent::WindowingComponent(std::string title, float width, float height, int fsaa, bool fullscreen, bool cursorVisible) : title(title), width(width), height(height), fsaa(fsaa), fullscreen(fullscreen), cursorVisible(cursorVisible), handle(NULL), isOpen(false), closeRequested(false), shouldClose(false)
 	{
 	}
 	

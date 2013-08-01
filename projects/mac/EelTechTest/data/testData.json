@@ -1,0 +1,28 @@
+[
+	{
+		"artemis_tag" : "Main Window",
+		"WindowingComponent" : 
+		{
+			"cursorVisible" : true,
+			"fsaa" : 0,
+			"fullscreen" : false,
+			"height" : 600.0,
+			"title" : "Eel Tech Test",
+			"width" : 800.0
+		},
+		"InputComponent" : null
+	},
+	
+	{
+		"WindowingComponent" : 
+		{
+			"cursorVisible" : true,
+			"fsaa" : 0,
+			"fullscreen" : false,
+			"height" : 480.0,
+			"title" : "Eel Tech Test 2",
+			"width" : 640.0
+		},
+		"InputComponent" : null
+	}
+]

@@ -63,6 +63,8 @@ namespace eeltech
 			artemis::Bag<int> releasedKeys;
 
 			std::vector<Joystick>* joysticks;
+		
+			ARTEMIS_SERIALIZATION_SETUP(InputComponent)
 	};
 	
 	

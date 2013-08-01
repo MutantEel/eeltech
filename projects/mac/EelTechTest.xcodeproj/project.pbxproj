@@ -14,6 +14,7 @@
 		14A8CCB717A457C1001CC65F /* EelTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CCB617A455D2001CC65F /* EelTech.framework */; };
 		14A8CCC017A45A0F001CC65F /* EelTech.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14A8CCB617A455D2001CC65F /* EelTech.framework */; };
 		14A8CCC217A470A3001CC65F /* Artemis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8CCC117A470A3001CC65F /* Artemis.framework */; };
+		14A8CD8617A9FE72001CC65F /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = 14A8CD8517A9FE72001CC65F /* testData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		14A8CCA717A4556A001CC65F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		14A8CCAE17A455D2001CC65F /* EelTech.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = EelTech.xcodeproj; sourceTree = "<group>"; };
 		14A8CCC117A470A3001CC65F /* Artemis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Artemis.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/EelTechTest-baeqmsbtwowyyhahzvwtlcpoyvlt/Build/Products/Debug/Artemis.framework"; sourceTree = "<group>"; };
+		14A8CD8517A9FE72001CC65F /* testData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = testData.json; path = data/testData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		14A8CC9717A4556A001CC65F /* EelTechTest */ = {
 			isa = PBXGroup;
 			children = (
+				14A8CD8317A9FE69001CC65F /* data */,
 				14A8CCA617A4556A001CC65F /* MainMenu.xib */,
 				14A8CC9817A4556A001CC65F /* Supporting Files */,
 			);
@@ -132,6 +135,14 @@
 				14A8CCB617A455D2001CC65F /* EelTech.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD8317A9FE69001CC65F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD8517A9FE72001CC65F /* testData.json */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			files = (
 				14A8CC9C17A4556A001CC65F /* InfoPlist.strings in Resources */,
 				14A8CCA817A4556A001CC65F /* MainMenu.xib in Resources */,
+				14A8CD8617A9FE72001CC65F /* testData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,23 @@
 
 #include <EelTech/systems/GlfwWindowingSystem.hpp>
 #include <EelTech/systems/GlfwInputSystem.hpp>
+#include <Artemis/ComponentRegistry.hpp>
 #include <Artemis/SystemManager.hpp>
 #include <Artemis/Entity.hpp>
+#include <EelTech/core/FileSystem.hpp>
+#include <EelTech/core/File.hpp>
 
 int main(int argc, char *argv[])
 {
+	//register serializable components
+	artemis::ComponentRegistry::registerComponent<eeltech::WindowingComponent>();
+	artemis::ComponentRegistry::registerComponent<eeltech::InputComponent>();
+	
+	//setup filesystem
+	eeltech::FileSystem::init(argv[0]);
+	eeltech::FileSystem::mount("./", "/", true);
+	
+	//setup component systems
 	artemis::World world;
 	artemis::SystemManager* sm = world.getSystemManager();
 	
@@ -22,18 +34,28 @@ int main(int argc, char *argv[])
 	
 	sm->initializeAll();
 	
-	artemis::Entity& window = em->create();
 	
-	window.addComponent(new eeltech::WindowingComponent("Eel Tech Test", 800, 600));
-	window.addComponent(new eeltech::InputComponent());
-	window.refresh();
+	//load data
+	std::string testData = eeltech::File::loadString("testData.json");
 	
-	artemis::Entity& window2 = em->create();
+	if(testData.empty())
+	{
+		std::cout << "failed to load testData.json" << std::endl;
+		return 1;
+	}
 	
-	window2.addComponent(new eeltech::WindowingComponent("Eel Tech Test 2", 640, 480));
-	window.addComponent(new eeltech::InputComponent());
-	window2.refresh();
+	Json::Value root;
+	Json::Reader reader;
+	reader.parse(testData, root);
 	
+	em->deserialize(root);
+	
+	//get the main window that was loaded from data
+	artemis::Entity& e = world.getTagManager()->getEntity("Main Window");
+	eeltech::InputComponent* inputComp = dynamic_cast<eeltech::InputComponent*>(e.getComponent<eeltech::InputComponent>());
+	
+	
+	//do main loop
 	while(true)
 	{
 		world.loopStart();
@@ -43,14 +65,11 @@ int main(int argc, char *argv[])
 		winSys->process();
 		
 		
-		
-		eeltech::InputComponent* input = static_cast<eeltech::InputComponent*>(window.getComponent<eeltech::InputComponent>());
-		
-		if(input && !input->pressedKeys.isEmpty())
+		if(inputComp && !inputComp->pressedKeys.isEmpty())
 		{
-			for(int i = 0; i < input->pressedKeys.getCount(); i++)
+			for(int i = 0; i < inputComp->pressedKeys.getCount(); i++)
 			{
-				std::cout << "pressed key " << (char)input->pressedKeys.get(i) << std::endl;
+				std::cout << "pressed key " << (char)inputComp->pressedKeys.get(i) << std::endl;
 			}
 		}
 	}
